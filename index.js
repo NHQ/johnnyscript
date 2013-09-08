@@ -1,18 +1,15 @@
-var newPersonal = require('./newPersona')
+var tags = document.getElementsByTagName('*')
 
-var input = document.getElementById('input')
-var enter = document.getElementById('enter')
-var story = document.getElementById('story')
+for(var i = 0; i < tags.length; i++){
 
+  var tag = tags[i];
 
-// write module, tbd exported elsewhere
+  for(var ii = 0; ii < tag.classList.length; ii++){
 
-var lines = []
-var characters = {}
+    var className = tag.classList[ii]
 
-enter.addEventListener('click', function(evt){
-  lines.push(input.value);
-  var child = html('p', {id: new Date().getTime()}, input.value) 
-  input.value = '';
-  story.appendChild(child)
-})
+      console.log(className)
+
+  }
+
+}
